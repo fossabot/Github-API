@@ -26,6 +26,7 @@ class Project:
         self.badges = ""
         self.openIssuesCount = ""
         self.github_user = github_user
+        self.contributor = ""
    
     def create_JSON(self):
         return [{"id": self.get_id(),
@@ -33,6 +34,7 @@ class Project:
                 "html_url" : self.get_html_url(),
                 "language" : self.get_main_language(),
                 "languages": self.get_languages(),
+                "contributors": self.get_contributors(),
                 "branches" : self.get_branches(),
                 "badges" : self.get_badges(),
                 "open_issues_count" : self.get_open_issues_count()
@@ -49,7 +51,16 @@ class Project:
     
     def get_contributors(self):
         contributors = []
-        return ""
+        for contributor in self.github_user.repo.get_contributors():
+            dic = {"login":contributor.login,
+                    "id":contributor.id,
+                    "avatar_url":contributor.avatar_url,
+                    "html_url":contributor.html_url,
+                    "type":contributor.type,
+                    "contributions":contributor.contributions}
+            contributors.append(dic)
+
+        return contributors 
 
     def get_main_language(self):
         return self.github_user.repo.language
@@ -59,6 +70,7 @@ class Project:
         return ""
 
     def get_badges(self):
+        ''' In order to get the badges, we have to acces the readme file content, the API gives us the content encoded in base64, we must then decode it and after parse the content to find the badges (that's a way of doing it'''
         return ""
 
     def get_branches(self):
@@ -69,18 +81,6 @@ class Project:
 
     def get_open_issues_count(self):
         return self.github_user.repo.open_issues_count
-
-
-class Contributor:
-
-    def __init__(self, login, contributor_id, avatar_url, html_url, contributor_type, nb_contributions):
-        self.login = login
-        self.contributor_id = contributor_id
-        self.avatar_url = avatar_url
-        self.html_url = hmtl_url
-        self.contributor_type = contributor_type
-        self.nb_contributions = nb_contributions
-
 
 
 
