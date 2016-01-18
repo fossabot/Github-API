@@ -18,15 +18,7 @@ class Project:
     '''
 
     def __init__(self, github_user):
-        self.account_id = ""
-        self.name = ""
-        self.html_url = ""
-        self.language = ""
-        self.branches = ""
-        self.badges = ""
-        self.openIssuesCount = ""
         self.github_user = github_user
-        self.contributor = ""
    
     def create_JSON(self):
         return [{"id": self.get_id(),
@@ -37,7 +29,9 @@ class Project:
                 "contributors": self.get_contributors(),
                 "branches" : self.get_branches(),
                 "badges" : self.get_badges(),
-                "open_issues_count" : self.get_open_issues_count()
+                "open_issues_count" : self.get_open_issues_count(),
+                "lastCommit": "",
+                "ciStatus": ""
                 }]
 
     def get_id(self):
@@ -74,9 +68,14 @@ class Project:
         return ""
 
     def get_branches(self):
+        #TODO
         branches = []
         for branch in self.github_user.repo.get_branches():
-            branches.append(branch.name)
+            dic_branch = {"name" : branch.name,
+                        "commit": ""}
+        
+        branches.append(dic_branch)
+
         return branches  
 
     def get_open_issues_count(self):

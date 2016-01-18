@@ -1,8 +1,9 @@
 import json
 import os
+import pprint
 import DashboardAPI
 
-from flask import Flask,Response
+from flask import Flask,Response,jsonify
 
 app = Flask(__name__)
 
@@ -19,7 +20,6 @@ def get_repos_name():
 @app.route('/projects')
 def getProject():   
     ret_JSON = json.dumps(project.create_JSON()) 
-    
     response = Response(response = ret_JSON,
             status = 200,
             mimetype = "application/json")
