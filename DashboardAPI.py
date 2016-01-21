@@ -6,10 +6,18 @@ class GithubUser:
         Class that access a Github account
     '''
 
-    def __init__(self, token, repo):        
+    def __init__(self, token):        
         g = Github(token)
         self.user = g.get_user()
-        self.repo = self.user.get_repo(repo)
+        self.projects = []
+        self.repos = self.user.get_repos()
+
+    def get_projects(self):
+        for repo in self.repos:
+            proj = Project(repo)
+            info = proj.return_info()
+            self.projects.append(info)
+        return self.projects
 
 class Project:
     '''
@@ -17,11 +25,11 @@ class Project:
         GITHUB_TOKEN we have generated
     '''
 
-    def __init__(self, github_user):
-        self.github_user = github_user
-   
-    def create_JSON(self):
-        return [{"id": self.get_id(),
+    def __init__(self, repo):
+        self.repo = repo 
+
+    def return_info(self):
+        return {"id": self.get_id(),
                 "name": self.get_name(),
                 "html_url" : self.get_html_url(),
                 "language" : self.get_main_language(),
@@ -32,20 +40,20 @@ class Project:
                 "open_issues_count" : self.get_open_issues_count(),
                 "lastCommit": "",
                 "ciStatus": ""
-                }]
+                }
 
     def get_id(self):
-        return self.github_user.repo.id
+        return self.repo.id
 
     def get_name(self):
-        return self.github_user.repo.name
+        return self.repo.name
 
     def get_html_url(self):
-        return self.github_user.repo.html_url
+        return self.repo.html_url
     
     def get_contributors(self):
         contributors = []
-        for contributor in self.github_user.repo.get_contributors():
+        for contributor in self.repo.get_contributors():
             dic = {"login":contributor.login,
                     "id":contributor.id,
                     "avatar_url":contributor.avatar_url,
@@ -57,7 +65,7 @@ class Project:
         return contributors 
 
     def get_main_language(self):
-        return self.github_user.repo.language
+        return self.repo.language
 
     def get_languages(self):
         languages = []
@@ -70,7 +78,7 @@ class Project:
     def get_branches(self):
         #TODO
         branches = []
-        for branch in self.github_user.repo.get_branches():
+        for branch in self.repo.get_branches():
             dic_branch = {"name" : branch.name,
                         "commit": ""}
         
@@ -79,7 +87,7 @@ class Project:
         return branches  
 
     def get_open_issues_count(self):
-        return self.github_user.repo.open_issues_count
+        return self.repo.open_issues_count
 
 
 

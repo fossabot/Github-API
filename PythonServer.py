@@ -9,17 +9,15 @@ app = Flask(__name__)
 
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
-user = DashboardAPI.GithubUser(token, "GLOO")
-project = DashboardAPI.Project(user)
+user = DashboardAPI.GithubUser(token)
 
 @app.route('/')
 def get_repos_name():
     return "Project dashboard api"
 
-#@app.route('/Project', methods=['GET'])
-@app.route('/projects')
+@app.route('/projects', methods=['GET'])
 def getProject():   
-    ret_JSON = json.dumps(project.create_JSON()) 
+    ret_JSON = json.dumps(user.get_projects()) 
     response = Response(response = ret_JSON,
             status = 200,
             mimetype = "application/json")
