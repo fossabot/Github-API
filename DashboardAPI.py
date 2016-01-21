@@ -7,6 +7,7 @@ class GithubUser:
     '''
 
     def __init__(self, token):        
+        # g = Github("user","password")
         g = Github(token)
         self.user = g.get_user()
         self.projects = []
