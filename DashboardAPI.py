@@ -80,11 +80,11 @@ class Project:
         return ""
 
     def get_branches(self):
-        #TODO
         branches = []
         for branch in self.repo.get_branches():
             dic_branch = {"name" : branch.name,
-                        "commit": ""}
+                    "commit": {"sha":branch.commit.sha,
+                               "url":branch.commit.url}}
         
         branches.append(dic_branch)
 
