@@ -4,8 +4,10 @@ import pprint
 import DashboardAPI
 
 from flask import Flask,Response,jsonify
+from flask.ext.cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
