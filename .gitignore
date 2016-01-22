@@ -1,5 +1,8 @@
+# Swap files
 *.swp
 
+# Python related
+*.pyc
 __pycache__/
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm

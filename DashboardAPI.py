@@ -3,15 +3,14 @@ from github import Github
 
 class GithubUser:
     ''' 
-        Class that access a Github account
+        Class that creates a Github account
     '''
 
     def __init__(self, token):        
-        # g = Github("user","password")
         g = Github(token)
         self.user = g.get_user()
-        self.projects = []
         self.repos = self.user.get_repos()
+        self.projects = []
 
     def get_projects(self):
         for repo in self.repos:
@@ -70,7 +69,11 @@ class Project:
 
     def get_languages(self):
         languages = []
-        return ""
+        dic = self.repo.get_languages()
+        for key in dic.keys():
+            languages.append(key)
+
+        return languages
 
     def get_badges(self):
         ''' In order to get the badges, we have to acces the readme file content, the API gives us the content encoded in base64, we must then decode it and after parse the content to find the badges (that's a way of doing it'''
