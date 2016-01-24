@@ -1,9 +1,8 @@
 import json
 import os
-import pprint
 import DashboardAPI
 
-from flask import Flask,Response,jsonify
+from flask import Flask,Response
 from flask.ext.cors import CORS
 
 app = Flask(__name__)

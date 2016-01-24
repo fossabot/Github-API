@@ -1,4 +1,3 @@
-import json
 from github import Github
 
 class GithubUser:
@@ -76,7 +75,6 @@ class Project:
         return languages
 
     def get_badges(self):
-        ''' In order to get the badges, we have to acces the readme file content, the API gives us the content encoded in base64, we must then decode it and after parse the content to find the badges (that's a way of doing it'''
         return ""
 
     def get_branches(self):
