@@ -25,7 +25,12 @@ Une fois que l'environnement virtuel est installé vous pouvez ajouter les dépe
 pip install -r requirements.txt
 ```
 
-### Comment l'utiliser ?:
+### Comment l'utiliser?
 Pour le moment, si vous voulez accéder à notre dashboard qui est connecté à notre API, aller sur la page suivante:
 http://glo2003.xyz/?server=http://localhost:5000 .
+
+### Comment contribuer au projet?
+Si vous voulez contribuer à notre projet ou bien si vous avez trouvé un bug dans le code référez-vous au fichier [CONTRIBUTING][contributing].
+
+[contributing]: /CONTRIBUTING
 
