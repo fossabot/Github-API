@@ -4,6 +4,10 @@
 
 Notre API permet de vous connecter à de nombreux API (Github, Travis) et collecte de nombreuses informations sur vos projets Github accessibles. 
 
+### Comment contribuer au projet?
+Si vous voulez contribuer à notre projet ou bien si vous avez trouvé un bug dans le code référez-vous au fichier [CONTRIBUTING][contributing].
+
+[contributing]: /CONTRIBUTING
 ## Instructions:
 
 Pour commencer, vous devez vous créer un token Github pour accéder à l'API de Github. Vous pouvez suivre les étapes suivantes pour vous créer un token : [Se créer un Github token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/).
@@ -29,8 +33,4 @@ pip install -r requirements.txt
 Pour le moment, si vous voulez accéder à notre dashboard qui est connecté à notre API, aller sur la page suivante:
 http://glo2003.xyz/?server=http://localhost:5000 .
 
-### Comment contribuer au projet?
-Si vous voulez contribuer à notre projet ou bien si vous avez trouvé un bug dans le code référez-vous au fichier [CONTRIBUTING][contributing].
-
-[contributing]: /CONTRIBUTING
 
