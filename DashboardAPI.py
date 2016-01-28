@@ -35,10 +35,10 @@ class Project:
                 "languages": self.get_languages(),
                 "contributors": self.get_contributors(),
                 "branches" : self.get_branches(),
-                "badges" : self.get_badges(),
-                "open_issues_count" : self.get_open_issues_count(),
-                "lastCommit": "",
-                "ciStatus": ""
+#                "badges" : self.get_badges(),
+                "open_issues_count" : self.get_open_issues_count()
+#                "lastCommit": "",
+#                "ciStatus": ""
                 }
 
     def get_id(self):
@@ -67,12 +67,7 @@ class Project:
         return self.repo.language
 
     def get_languages(self):
-        languages = []
-        dic = self.repo.get_languages()
-        for key in dic.keys():
-            languages.append(key)
-
-        return languages
+        return self.repo.get_languages()
 
     def get_badges(self):
         return ""
@@ -91,7 +86,3 @@ class Project:
     def get_open_issues_count(self):
         return self.repo.open_issues_count
 
-
-
-    
-   
