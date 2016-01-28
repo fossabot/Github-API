@@ -1,13 +1,13 @@
-Si cela vous intéresse, cette page est un guide vous permettant d'optimiser votre participation
+Si cela vous intéresse, cette page est un guide vous permettant d'optimiser votre participation.
 
 ## Comment participer ?
 Puisque le projet est hébergé sur Github, le moyen le plus simple est de cloner le projet.
-Je vous encourage de consulter le [guide officiel](https://help.github.com/articles/fork-a-repo) pour plus d'informations
+Je vous encourage de consulter le [guide officiel](https://help.github.com/articles/fork-a-repo) pour plus d'informations.
 
-Une fois votre développement terminé, il vous suffira alors de [proposer une pull request](https://help.github.com/articles/using-pull-requests) 
+Une fois votre développement terminé, il vous suffira alors de [proposer une pull request](https://help.github.com/articles/using-pull-requests).
 
 ## Sur quoi travailler ?
-Si vous avez envie de participer, mais que vous ne savez pas sur quoi travailler, vous pouvez consulter la [liste des issues ouvertes](https://github.com/glo2003/team9/issues?state=open)
+Si vous avez envie de participer, mais que vous ne savez pas sur quoi travailler, vous pouvez consulter la [liste des issues ouvertes](https://github.com/glo2003/team9/issues?state=open).
 
 ### Ordre de priorités
 Chaque ticket est associé à un ou plusieurs label permettant de les classifier, et donc de déterminer leur importance.
