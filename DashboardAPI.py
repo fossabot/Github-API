@@ -35,10 +35,7 @@ class Project:
                 "languages": self.get_languages(),
                 "contributors": self.get_contributors(),
                 "branches" : self.get_branches(),
-#                "badges" : self.get_badges(),
                 "open_issues_count" : self.get_open_issues_count()
-#                "lastCommit": "",
-#                "ciStatus": ""
                 }
 
     def get_id(self):
@@ -68,9 +65,6 @@ class Project:
 
     def get_languages(self):
         return self.repo.get_languages()
-
-    def get_badges(self):
-        return ""
 
     def get_branches(self):
         branches = []
