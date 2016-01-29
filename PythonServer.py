@@ -11,6 +11,8 @@ CORS(app)
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
 user = DashboardAPI.GithubUser(token)
+ret_JSON = json.dumps(user.get_projects())
+
 
 @app.route('/')
 def get_repos_name():
@@ -18,7 +20,6 @@ def get_repos_name():
 
 @app.route('/projects', methods=['GET'])
 def getProject():   
-    ret_JSON = json.dumps(user.get_projects()) 
     response = Response(response = ret_JSON,
             status = 200,
             mimetype = "application/json")
