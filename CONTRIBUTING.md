@@ -39,6 +39,6 @@ Assurez-vous de respecter la syntaxe et les normes de programmation suivis dans 
 
 ## Comment mon travail est validé ?
 Lorsque vous proposez une pull request, un responsable du projet va contrôler votre travail selon plusieurs aspects :
-* fonctionnellement : la plus value de votre travail est acceptable et aucune régression n'est introduite
-* qualité de code : le code livré est propre, maintenable, testé
-* style de code : votre travail est dans la lignée du travail existant, et ne représentera pas une verrue au milieu du reste du projet
+* Fonctionnellement : la plus value de votre travail est acceptable et aucune régression n'est introduite.
+* Qualité de code : le code livré est propre, maintenable, testé.
+* Style de code : votre travail est dans la lignée du travail existant, et ne représentera pas une verrue au milieu du reste du projet.
