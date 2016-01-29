@@ -6,6 +6,27 @@ Je vous encourage de consulter le [guide officiel](https://help.github.com/artic
 
 Une fois votre développement terminé, il vous suffira alors de [proposer une pull request](https://help.github.com/articles/using-pull-requests).
 
+### Quoi mettre dans un message commit ?
+Après avoir effectuer toutes les modifications, vous utilisez la commande 
+```bash
+git commit -m "Votre message" 
+```
+Le message doit indiquer brièvement mais clairement ce qui a été modifier dans le dépôt.
+
+### Quand créer une branche ?
+Vous pouvez créer une branche en utilisant la commande 
+```bash
+git branch
+```
+Il est recommandé de créer une branche lorsque vous voulez effectuer plusieurs modifications dans le projet de votre coté sans toucher au projet principale.
+
+
+### Comment faire les fusions ?
+Quand vous terminez le travail sur une branche, vous pouvez fusionner vos modifications vers la branche master en utilisant la commande 
+```bash
+git merge
+```
+
 ## Sur quoi travailler ?
 Si vous avez envie de participer, mais que vous ne savez pas sur quoi travailler, vous pouvez consulter la [liste des issues ouvertes](https://github.com/glo2003/team9/issues?state=open).
 
