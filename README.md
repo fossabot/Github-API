@@ -19,9 +19,9 @@ Une fois votre Github token récupéré, vous devez l'ajouter comme environnemen
 Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter l'application.<br/> 
 [pip](http://pip.readthedocs.org/en/latest/installing.html) est aussi recommandé pour installer les dépendances.  
 
-Pour créer un nouveau environnement virtuel Python, tappez la commande suivante :
+Nous vous recommandons de créer un nouveau environnement virtuel Python avec virtualenv, pour ce faire tappez la commande suivante :
 ```bash
-virtualenv newenv
+virtualenv -p <path-to-your-Python3> newenv 
 ```
 
 Une fois que l'environnement virtuel est installé vous pouvez ajouter les dépendances en exécutant la commande suivante:
