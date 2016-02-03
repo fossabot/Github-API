@@ -34,8 +34,9 @@ Pour démarrer le serveur:
 ```bash
 python PythonServer.py
 ```
+Le serveur roule sur le port 5000.
 
-Pour le moment, si vous voulez accéder à notre dashboard qui est connecté à notre API, aller sur la page suivante:
+Pour pouvez tester l'API à la page suivante:
 http://glo2003.xyz/?server=http://localhost:5000 .
 
 
