@@ -21,7 +21,7 @@ Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter 
 
 Nous vous recommandons de créer un nouveau environnement virtuel Python avec virtualenv, pour ce faire tappez la commande suivante :
 ```bash
-virtualenv -p <path-to-your-Python3> newenv 
+virtualenv -p /path/to/your/Python3 newenv 
 ```
 
 Une fois que l'environnement virtuel est installé vous pouvez ajouter les dépendances en exécutant la commande suivante:
