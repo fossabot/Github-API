@@ -16,7 +16,7 @@ Une fois votre Github token récupéré, vous devez l'ajouter comme environnemen
 
 ### Installation:
 
-Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter le programme.<br/> 
+Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter l'application.<br/> 
 [pip](http://pip.readthedocs.org/en/latest/installing.html) est aussi recommandé pour installer les dépendances.  
 
 Pour créer un nouveau environnement virtuel Python, tappez la commande suivante :
@@ -30,6 +30,11 @@ pip install -r requirements.txt
 ```
 
 ### Comment l'utiliser?
+Pour démarrer le serveur:
+```bash
+python PythonServer.py
+```
+
 Pour le moment, si vous voulez accéder à notre dashboard qui est connecté à notre API, aller sur la page suivante:
 http://glo2003.xyz/?server=http://localhost:5000 .
 
