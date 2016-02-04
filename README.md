@@ -5,7 +5,7 @@
 Notre API permet de vous connecter à de nombreux API (Github, Travis) et collecte de nombreuses informations sur vos projets Github accessibles. 
 
 ### Comment contribuer au projet?
-Si vous voulez contribuer à notre projet ou bien si vous avez trouvé un bug dans le code référez-vous au fichier [CONTRIBUTING](CONTRIBUTING.md).
+Si vous voulez contribuer à notre projet ou bien si vous avez trouvé un bogue dans le code référez-vous au fichier [CONTRIBUTING](CONTRIBUTING.md).
 
 [contributing]: /CONTRIBUTING
 ## Instructions:
