@@ -14,9 +14,13 @@ Pour commencer, vous devez vous créer un token Github pour accéder à l'API de
 
 Une fois votre Github token récupéré, vous devez l'ajouter comme environnement de variable sous le nom "GITHUB_TOKEN".
 
-### Installation:
+### Dépendances et installation:
 
-Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter l'application.<br/> 
+Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter l'application, celle-ci utilise les dépendances suivantes:
+* Flask
+* Flask-CORS
+* PyGithub
+
 [pip](http://pip.readthedocs.org/en/latest/installing.html) est aussi recommandé pour installer les dépendances.  
 
 Nous vous recommandons de créer un nouveau environnement virtuel Python avec virtualenv, pour ce faire tappez la commande suivante :
@@ -28,6 +32,7 @@ Une fois que l'environnement virtuel est installé vous pouvez ajouter les dépe
 ```bash
 pip install -r requirements.txt
 ```
+
 
 ### Comment l'utiliser?
 Pour démarrer le serveur:
