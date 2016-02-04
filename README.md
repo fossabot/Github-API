@@ -23,7 +23,7 @@ Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter 
 
 [pip](http://pip.readthedocs.org/en/latest/installing.html) est aussi recommandé pour installer les dépendances.  
 
-Nous vous recommandons de créer un nouveau environnement virtuel Python avec virtualenv, pour ce faire tappez la commande suivante :
+Nous vous suggérons de créer un nouveau environnement virtuel Python avec virtualenv, voici la commande pour créer un nouveau environnement en spécifiant le path pour votre Python 3:
 ```bash
 virtualenv -p /path/to/your/Python3 newenv 
 ```
