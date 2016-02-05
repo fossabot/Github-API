@@ -5,7 +5,7 @@
 Notre API permet de vous connecter à de nombreux API (Github, Travis) et collecte de nombreuses informations sur vos projets Github accessibles. 
 
 ### Comment contribuer au projet?
-Si vous voulez contribuer à notre projet ou bien si vous avez trouvé un bug dans le code référez-vous au fichier [CONTRIBUTING](CONTRIBUTING.md).
+Si vous voulez contribuer à notre projet ou bien si vous avez trouvé un bogue dans le code référez-vous au fichier [CONTRIBUTING](CONTRIBUTING.md).
 
 [contributing]: /CONTRIBUTING
 ## Instructions:
@@ -41,7 +41,10 @@ python PythonServer.py
 ```
 Le serveur roule sur le port 5000.
 
-Pour pouvez tester l'API à la page suivante:
+Vous pouvez tester l'API à la page suivante:
 http://glo2003.xyz/?server=http://localhost:5000 .
+
+Pour consulter les responses sur les questions du TP1, vous pouvez acceder à notre wiki:
+https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP1
 
 
