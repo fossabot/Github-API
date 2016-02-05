@@ -3,10 +3,7 @@ python:
   - "3.5"
 
 before_script:
-  - chmod +x dummyTest.py
-
-# command to install dependencies
-install: "pip install -r requirements.txt"
+  - chmod a+x dummyTest.py
 
 # command to run tests
 script: tests/dummyTest.py 
