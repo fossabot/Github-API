@@ -6,4 +6,4 @@ before_script:
   - chmod +x ./tests/dummyTest.py
 
 # command to run tests
-script: ./tests/dummyTest.py
+script: ./tests/dummyTest2.py
