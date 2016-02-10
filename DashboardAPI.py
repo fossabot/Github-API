@@ -72,8 +72,7 @@ class Project:
             dic_branch = {"name" : branch.name,
                     "commit": {"sha":branch.commit.sha,
                                "url":branch.commit.url}}
-        
-        branches.append(dic_branch)
+            branches.append(dic_branch)
 
         return branches  
 
