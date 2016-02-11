@@ -1,6 +1,6 @@
 import json
 import os
-import DashboardAPI
+import GithubUser 
 
 from flask import Flask,Response
 from flask.ext.cors import CORS
@@ -10,9 +10,8 @@ CORS(app)
 
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
-user = DashboardAPI.GithubUser(token)
+user = GithubUser.GithubUser(token)
 ret_JSON = json.dumps(user.get_projects())
-
 
 @app.route('/')
 def get_repos_name():
