@@ -53,9 +53,6 @@ class GithubUser:
     def get_all_issues(self, repo):
         issues = []
         for issue in repo.get_issues():         
-        
-#            test = json.dumps(list(issue.user.__dict__))
-            #print(test)
             dic_issue = {"id" : issue.id,
                         "url" : issue.url,
                         "repository_url" : issue.repository.url,
@@ -68,21 +65,39 @@ class GithubUser:
                         "title" : issue.title,
                         "body" : issue.body,
                         "user" : self.get_user_info(issue.user),
-                        "assignee" : self.get_user_info(issue.assignee),
+                        "assignee" : None if issue.assignee is None else self.get_user_info(issue.assignee),
+                        "milestone": None if issue.milestone is None else self.milestone(issue.milestone),
+                        "labels": None if issue.labels is None else self.get_labels(issue.labels),
                         "comments" : issue.comments,
-                        "closed_at" : None if issue.closed_at is None else issue.closed_at.isoformat(),
-                        "created_at": None if issue.created_at is None else issue.created_at.isoformat(),
-                        "updated_at" : None if issue.updated_at is None  else issue.updated_at.isoformat()
+                        "pull_request": None if issue.pull_request is None else self.get_pull_request(issue.pull_request),
+                        "closed_at" : self.get_isoformat_date(issue.closed_at),
+                        "created_at": self.get_isoformat_date(issue.created_at),
+                        "updated_at" : self.get_isoformat_date(issue.updated_at)
                         }
             issues.append(dic_issue)
         return issues
-    
+
+    def get_pull_request(self, issue):
+        dic_pull_request = {"diff_url": issue.diff_url,
+                             "html_url": issue.html_url,
+                             "patch_url": issue.patch_url
+                            }
+
+    def get_labels(self, labels):
+        labels = []
+        for label in labels:
+            dic_label = {"color": label.color,
+                         "name" : label.name,
+                         "url": label.url 
+                         }
+            labels.append(dic_label)
+   
     def get_user_info(self, user):
         dic_user_info = {"login" : user.login,
                          "id": user.id,
                          "avatar_url": user.avatar_url,
                          "gravatar_id" : user.gravatar_id,
-                         "url": user.id,
+                         "url": user.url,
                          "html_url" : user.html_url,
                          "followers_url" : user.followers_url,
                          "gists_url" : user.gists_url,
@@ -110,9 +125,9 @@ class GithubUser:
                          "open_issues" : milestone.open_issues,
                          "closed_issues" : milestone.closed_issues,
                          "created_at": milestone.created_at,
-                         "updated_at" : get_isoformat_date(milestone.updated_at),
-                         "closed_at": get_isoformat_date(milestone.closed_at),
-                         "due_on" : get_isoformat_date(milesonte.due_on)
+                         "updated_at" : self.get_isoformat_date(milestone.updated_at),
+                         "closed_at": self.get_isoformat_date(milestone.closed_at),
+                         "due_on" : self.get_isoformat_date(milesonte.due_on)
                          }
 
     def to_JSON(self, obj):
