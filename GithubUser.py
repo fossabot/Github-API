@@ -91,6 +91,7 @@ class GithubUser:
                          "url": label.url 
                          }
             labels.append(dic_label)
+        return labels
    
     def get_user_info(self, user):
         dic_user_info = {"login" : user.login,
@@ -129,9 +130,7 @@ class GithubUser:
                          "closed_at": self.get_isoformat_date(milestone.closed_at),
                          "due_on" : self.get_isoformat_date(milesonte.due_on)
                          }
-
-    def to_JSON(self, obj):
-        return json.dumps(obj, skipkeys=True, default=lambda o: o.__dict__,sort_keys=True, indent=4)
+        return milestone_dic
 
     def get_isoformat_date(self, date):
         return None if date is None else date.isoformat()
