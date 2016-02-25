@@ -1,4 +1,4 @@
-# GLOO-2003 API
+# GLOO-2003 API  ![Build Status](https://travis-ci.com/glo2003/team9.svg?token=Epmbu7uyWDkfVaXsgPa9&branch=master)
 
 ## Vision
 
