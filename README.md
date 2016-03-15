@@ -38,6 +38,10 @@ L'intégration continue du projet s'exécute avec Travis-ci, lorsque les tests r
 
 Le projet est accesible à l'adresse suivante : https://github-api-team9.herokuapp.com/ .
 
+### Données métriques sur le projet
+Le projet utilise l'outil "Coverage" qui permet de mesurer la couverture des tests en python. Dans notre cas, nous l'utilisons pour déterminer le pourcentage de tests réussis lors des builds effectués par Travis-ci.
+
+
 ### Comment l'utiliser?
 Pour démarrer le serveur:
 ```bash
