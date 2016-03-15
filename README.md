@@ -33,6 +33,24 @@ Une fois que l'environnement virtuel est installé vous pouvez ajouter les dépe
 pip install -r requirements.txt
 ```
 
+### Intégration continue
+L'intégration continue du projet s'exécute avec Travis-ci, lorsque les tests réussisent celui déploie automatiquement le projet sur Heroku.
+Le projet est accesible à l'adresse suivante : https://github-api-team9.herokuapp.com/ .
+Il est important toutefois de bien sauvegarder votre Github token pour qu'Heroku puisse démarrer le projet. Voir la section suivante pour voir comment enregistrer vos variables de configuration pour Heroku.
+
+### Si vous voulez déployer directement sur Heroku
+Voici les étapes à suivre si vous voulez déployer le projet directement sur Heroku sans passer par l'entremise de Travis-ci:
+
+    1. Récupérer le code du projet et accéder au dossier
+    2. Tapper ```bash  
+                 heroku 
+              ```
+    3. Puis ```bash
+               git push heroku master
+            ```
+    4. Afin qu'Heroku puisse reconnaitre votre Github token, il faut l'ajouter aux variables de configuration d'Heroku, voici la commande à exécuter:
+        heroku config:set GITHUB_TOKEN=VOTRE_TOKEN
+    5. Finalement, vous n'avez qu'à accéder à l'URL de votre application Heroku qui vous sera retourné.
 
 ### Comment l'utiliser?
 Pour démarrer le serveur:
