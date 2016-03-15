@@ -1,18 +1,14 @@
 language: python
 python:
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
+- '3.2'
+- '3.3'
+- '3.4'
+- '3.5'
+before_script:
+- chmod +x ./tests/dummyTest.py
+
+script: "./tests/dummyTest.py"
 
 deploy:
-    provider: heroku
-    app: github-api-team09
-    api_key:
-        secure: "AFLfXkHQ+DPrHR4Nshda+3D1GLrFDD8kit68L/cgu/Uf5XG6UBAGCUBd1Uf39NuB/RKyJ6qB5o6+b1azwjTqm90eHyfy//iVcHsNAbXt6diTYeP8aBU7InQr4vndDZbzbUHEDoDpbE0Dw+a5mZNmWPyNx3INwpjZ/pZWUxYLbKHoRFazf2nkkLr3QDQZunzz9z2BfAJ2WnRjvHr4MGInhpAlNo+BLOB7aMmnjwVFMfDlnd38Aw0mhnrZDEfzAQRUpobUtwRcC+ymtS5HlI2NeNEFEFRoDbhSpWBIXDkmBwgJ0eFOmLiJ4I9KAqbctSxWd8HzRWHIF6UN2YMQxO1inoH3lFiK7SGnhtOCmzhcc5+SD8AKyABsaEi2y8yylMgr15CcjSgxffi/KN8HEOzJbdCYDfVhee2VCpOrLFUxQ3j6ZsUzd5g8PXjiuRqwJJRcbNhJ2x/Dh5hGRWNYGS1wxoO15tYJHvQZYY0SiYo0nb0wc2Fv7oMbhczS+KCWtc1jh1pFqAiyRL1pSyx/okkr1Vw37ldZCJeV3UYJuyBs6ZG442FZ0tVca9esfiOHGn1agNCU+p+/49NjVGH6mAxXt6z3XVUyoXOur2Ze209wVagGI5aEOHOrNuhQ0BeQXfNiumFQ9nF1EbsROsl2FwJRyELHWfhaj31QZzd/RR0HUU0="
-
-before_script:
-  - chmod +x ./tests/dummyTest.py
-
-# command to run tests
-script: ./tests/dummyTest.py
+  api_key:
+    secure: VNXjL9BsX5fvpl1ZKJyCDs4Y292CbXKW44doHBF5Qjgnc5OvkxWgF8vCSCN4Jv/RPohQq48OF4Yk6IzJyuQKqJ/WvXO1DLQ875ftgXVhXBRWo0Qo8MrBQq1HESB6Sulb86AKITiJE6Sb46KxpZJoGqeOvyrPUrHlYIPGf3mf4Sl/OMUo1C8P3b0V2oztak5MkFDeUzSfqXNKv95iNmxGt6CMMv8yROIEs1LVOuQySSlATHqZPMshZu4iYffFtuj/eIhy0eFKJpldVbgeDwuJJDQ6+W+CDCWvArWs0RzA9wCT1oEAnOJiESPpheU7bvUNJ++5dHWtWB+93w43IVPLjcPSS5o9SNcIzH8+84TWQ3dlamHhHb2A681SDIS63G8FbXfyUTIW9tgwHZ08Mh9/EotJkNuu8rrG/rZHgDaA70qsDkgqoOY5IjTD+ht35GsAMtqACwaAdzzw07jwvzMVBVmDLkvFwAJUN4m3FCfZ50kUThRxQ5xExUh4SGtl88MGFOviATegtm/GcU4qO43nynMjX+YmR7DiN9n7Jtog0+oDr84u66/54jXag6VUuM22694PC2JClNZYe9+rFzwmIagKJshWUjKRB2Znya6qcvXb8/Xo1fpv5N4RkyzcBhfxsOusPWcf0xQuInJldUohDQnYkly07Gg7T5HR/qy6DTQ=
