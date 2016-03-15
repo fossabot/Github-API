@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ### Intégration continue
 L'intégration continue du projet s'exécute avec Travis-ci, lorsque les tests réussisent celui-ci déploie automatiquement le projet sur Heroku. Afin que Travis-ci puisse déployer automatiquement le projet, il faut ajouter son Heroku api key afin qu'il puisse s'y connecter. Pour plus d'informations à cet effet, aller sur ce [lien](https://blog.travis-ci.com/2013-07-09-introducing-continuous-deployment-to-heroku/).
 
-Le projet est accesible à l'adresse suivante : https://github-api-team09.herokuapp.com/ .
+Le projet est accesible à l'adresse suivante : https://github-api-team9.herokuapp.com/ .
 
 ### Comment l'utiliser?
 Pour démarrer le serveur:
