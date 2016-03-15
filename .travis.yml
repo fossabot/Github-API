@@ -5,6 +5,12 @@ python:
   - "3.4"
   - "3.5"
 
+deploy:
+    provider: heroku
+    app: github-api-team09
+    api_key:
+        secure: "AFLfXkHQ+DPrHR4Nshda+3D1GLrFDD8kit68L/cgu/Uf5XG6UBAGCUBd1Uf39NuB/RKyJ6qB5o6+b1azwjTqm90eHyfy//iVcHsNAbXt6diTYeP8aBU7InQr4vndDZbzbUHEDoDpbE0Dw+a5mZNmWPyNx3INwpjZ/pZWUxYLbKHoRFazf2nkkLr3QDQZunzz9z2BfAJ2WnRjvHr4MGInhpAlNo+BLOB7aMmnjwVFMfDlnd38Aw0mhnrZDEfzAQRUpobUtwRcC+ymtS5HlI2NeNEFEFRoDbhSpWBIXDkmBwgJ0eFOmLiJ4I9KAqbctSxWd8HzRWHIF6UN2YMQxO1inoH3lFiK7SGnhtOCmzhcc5+SD8AKyABsaEi2y8yylMgr15CcjSgxffi/KN8HEOzJbdCYDfVhee2VCpOrLFUxQ3j6ZsUzd5g8PXjiuRqwJJRcbNhJ2x/Dh5hGRWNYGS1wxoO15tYJHvQZYY0SiYo0nb0wc2Fv7oMbhczS+KCWtc1jh1pFqAiyRL1pSyx/okkr1Vw37ldZCJeV3UYJuyBs6ZG442FZ0tVca9esfiOHGn1agNCU+p+/49NjVGH6mAxXt6z3XVUyoXOur2Ze209wVagGI5aEOHOrNuhQ0BeQXfNiumFQ9nF1EbsROsl2FwJRyELHWfhaj31QZzd/RR0HUU0="
+
 before_script:
   - chmod +x ./tests/dummyTest.py
 
