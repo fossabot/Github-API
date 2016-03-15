@@ -15,7 +15,7 @@ ret_JSON = json.dumps(user.get_projects())
 
 @app.route('/')
 def get_repos_name():
-    return "Project dashboard api"
+    return "New Project dashboard api"
 
 @app.route('/projects', methods=['GET'])
 def getProject():   
