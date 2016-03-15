@@ -38,7 +38,6 @@ L'intégration continue du projet s'exécute avec Travis-ci, lorsque les tests r
 
 Le projet est accesible à l'adresse suivante : https://github-api-team09.herokuapp.com/ .
 
-
 ### Comment l'utiliser?
 Pour démarrer le serveur:
 ```bash
