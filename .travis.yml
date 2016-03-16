@@ -6,8 +6,8 @@ python:
 - '3.5'
 before_script:
     flake8 .
-script: coverage run tests/dummyTest.py
-after_succes:
+script: 
+- coverage run tests/dummyTest.py
 - coverage report
 deploy:
   provider: heroku
