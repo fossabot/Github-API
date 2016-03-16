@@ -1,5 +1,6 @@
 from github import Github
 
+
 class GithubUser:
 
     '''
@@ -67,14 +68,18 @@ class GithubUser:
                 "body": issue.body,
                 "user": self.get_user_info(
                     issue.user),
-                "assignee": None if issue.assignee is None else self.get_user_info(
+                "assignee": None if issue.assignee is None
+                else self.get_user_info(
                     issue.assignee),
-                "milestone": None if issue.milestone is None else self.milestone(
+                "milestone": None if issue.milestone is None
+                else self.milestone(
                     issue.milestone),
-                "labels": None if issue.labels is None else self.get_labels(
+                "labels": None if issue.labels is None
+                else self.get_labels(
                     issue.labels),
                 "comments": issue.comments,
-                "pull_request": None if issue.pull_request is None else self.get_pull_request(
+                "pull_request": None if issue.pull_request is None
+                else self.get_pull_request(
                     issue.pull_request),
                 "closed_at": self.get_isoformat_date(
                     issue.closed_at),
