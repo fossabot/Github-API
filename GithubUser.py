@@ -10,7 +10,7 @@ class GithubUser:
     def __init__(self, token):
         g = Github(token)
         self.projects = []
-        self.repos=g.get_user().get_repos()
+        self.repos = g.get_user().get_repos()
 
     def get_projects(self):
         for repo in self.repos:
