@@ -1,4 +1,4 @@
-# GLOO-2003 API  ![Build Status](https://travis-ci.com/glo2003/team9.svg?token=Epmbu7uyWDkfVaXsgPa9&branch=master)
+# GLOO-2003 API  ![Build Status](https://travis-ci.com/glo2003/team9.svg?token=Epmbu7uyWDkfVaXsgPa9&branch=master) ![Heroku Status](https://heroku-badge.herokuapp.com/?app=github-api-team9)
 
 ## Vision
 
