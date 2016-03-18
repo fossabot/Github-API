@@ -42,7 +42,7 @@ Le projet est accesible à l'adresse suivante : https://github-api-team9.herokua
 Le projet utilise l'outil "Coverage" qui permet de mesurer la couverture des tests en python. Dans notre cas, nous l'utilisons pour déterminer le pourcentage de tests réussis lors des builds effectués par Travis-ci.
 
 ### Vérification de style
-Notre projet doit respecter les normes de style du PEP8(https://www.python.org/dev/peps/pep-0008/). Travis-Ci ne permettra pas de déployer le code si celui-ci ne respecte pas le style, si tel est le cas les erreurs de style seront affichés dans Travis-ci.
+Notre projet doit respecter les normes de style du [PEP8] (https://www.python.org/dev/peps/pep-0008/) qui est à la norme à respecter en python. Travis-Ci ne permettra pas de déployer le code si celui-ci ne respecte pas le style, si tel est le cas les erreurs de style seront affichés dans Travis-ci.
 
 ### Comment l'utiliser?
 Pour démarrer le serveur:
