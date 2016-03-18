@@ -20,6 +20,8 @@ Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter 
 * Flask
 * Flask-CORS
 * PyGithub
+* PEP8
+* Coverage
 
 [pip](http://pip.readthedocs.org/en/latest/installing.html) est aussi recommandé pour installer les dépendances.  
 
