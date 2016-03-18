@@ -41,6 +41,8 @@ Le projet est accesible à l'adresse suivante : https://github-api-team9.herokua
 ### Données métriques sur le projet
 Le projet utilise l'outil "Coverage" qui permet de mesurer la couverture des tests en python. Dans notre cas, nous l'utilisons pour déterminer le pourcentage de tests réussis lors des builds effectués par Travis-ci.
 
+### Vérification de style
+Notre projet doit respecter les normes de style du PEP8(https://www.python.org/dev/peps/pep-0008/). Travis-Ci ne permettra pas de déployer le code si celui-ci ne respecte pas le style, si tel est le cas les erreurs de style seront affichés dans Travis-ci.
 
 ### Comment l'utiliser?
 Pour démarrer le serveur:
@@ -55,4 +57,5 @@ http://glo2003.xyz/?server=http://localhost:5000 .
 Pour consulter les réponses aux questions du projet, vous pouvez acceder à notre wiki:
 - TP1 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP1
 - TP2 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP2
+- TP3 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP3
 
