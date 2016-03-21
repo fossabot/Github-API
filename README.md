@@ -58,7 +58,7 @@ Si vous voulez, vous pouvez le tester localement en exécutant :
   flake8 team9/
 ```
 
-### Comment l'utiliser?
+## Comment exécuter le projet?
 Pour démarrer le serveur:
 ```bash
 python PythonServer.py
