@@ -7,10 +7,9 @@ class GithubUser:
         Class that returns informations about your Github projects
     '''
 
-    def __init__(self, token):
-        g = Github(token)
+    def __init__(self, githubObject):
         self.projects = []
-        self.repos = g.get_user().get_repos()
+        self.repos = githubObject.get_user().get_repos()
 
     def get_projects(self):
         for repo in self.repos:

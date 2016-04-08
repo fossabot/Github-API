@@ -2,6 +2,7 @@ import json
 import os
 import GithubUser
 
+from github import Github
 from flask import Flask, Response
 from flask.ext.cors import CORS
 
@@ -10,7 +11,8 @@ CORS(app)
 
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
-user = GithubUser.GithubUser(token)
+g = Github(token)
+user = GithubUser.GithubUser(g)
 ret_JSON = json.dumps(user.get_projects())
 
 
