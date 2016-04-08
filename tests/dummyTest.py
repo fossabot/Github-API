@@ -3,7 +3,7 @@
 import unittest
 
 
-class LearningCase(unittest.TestCase):
+class GithubUserTest(unittest.TestCase):
 
     def test_starting_out(self):
         self.assertEqual(1, 1)
