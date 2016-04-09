@@ -2,7 +2,6 @@
 
 import unittest
 from team9 import GithubUser
-
 from unittest.mock import MagicMock
 
 
@@ -31,10 +30,8 @@ class GithubUserTest(unittest.TestCase):
         self.assertEqual(len(projects), 1)
 
 
-
 def main():
     unittest.main()
-
 
 if __name__ == "__main__":
     main()
