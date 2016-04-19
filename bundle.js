@@ -11126,6 +11126,8 @@
 	
 	var freezer = new _freezerJs2.default(_emptystate2.default);
 	
+	var extension = "/projects";
+	
 	var queryString = {};
 	if (window.location.search !== "") {
 	  queryString = _querystringparser2.default.parse(window.location.search.substr(1));
@@ -11138,7 +11140,7 @@
 	if (queryString["server"]) {
 	  projectsSetter = function projectsSetter() {
 	    (0, _reqwest2.default)({
-	      url: queryString["server"] + "/projects",
+	      url: queryString["server"] + extension,
 	      method: 'get',
 	      type: 'json',
 	      success: function success(resp) {
@@ -11173,6 +11175,27 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var originalOutput = function originalOutput() {
+	        alert('Arranging in intial order');
+	        extension = "/projects";
+	        projectsSetter();
+	      };
+	      var max_minOutput = function max_minOutput() {
+	        alert('Arranging by open issues (max to min)');
+	        extension = "/filter_max_min";
+	        projectsSetter();
+	      };
+	      var min_maxOutput = function min_maxOutput() {
+	        alert('Arranging by open issues (min to max)');
+	        extension = "/filter_min_max";
+	        projectsSetter();
+	      };
+	      var contributorsOutput = function contributorsOutput() {
+	        alert('Arranging by the number of contributors');
+	        extension = "/filter_contributors";
+	        projectsSetter();
+	      };
+	
 	      var state = freezer.get();
 	      return _react2.default.createElement(
 	        'div',
@@ -11181,6 +11204,39 @@
 	          'h1',
 	          null,
 	          state.title
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Filtering options:'
+	        ),
+	        _react2.default.createElement(
+	          'span',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { 'class': 'btn-group', role: 'group', 'aria-label': '...' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: originalOutput, type: 'button', 'class': 'btn btn-default' },
+	              'Initial state'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: max_minOutput, type: 'button', 'class': 'btn btn-default' },
+	              'Max open issues first'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: min_maxOutput, type: 'button', 'class': 'btn btn-default' },
+	              'Min open issues first'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: contributorsOutput, type: 'button', 'class': 'btn btn-default' },
+	              'Filtered by contributors number'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(_projectlist2.default, { projects: state.projects })
 	      );
