@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 import unittest
-from team9 import GithubUser
+import GithubUser
 from unittest.mock import MagicMock
 
 
