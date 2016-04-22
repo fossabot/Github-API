@@ -12,18 +12,16 @@ CORS(app)
 
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
-if (token is None) { 
-    username = getpass.getuser('Enter your Github username : ')
-    password = getpass.getpass('Enter your Github password : ')
-    g = Github( username, password);
-} else {
+if (token):
     g = Github(token)
-}
+else:
+    username = input('Enter your Github username : ') 
+    password = getpass.getpass('Enter your Github password : ')
+    g = Github( username, password); 
 
+print('Connecting to your Github account and getting all yours projects... ')
 user = GithubUser.GithubUser(g)
 ret_JSON = json.dumps(user.get_projects())
-
-print(_configuration())
 
 ################################################
 # Filtering outuput                            #
@@ -54,7 +52,6 @@ def getProject():
 
     return response
 
-
 @app.route('/filter_max_min', methods=['GET'])
 def getProject2():
     response2 = Response(response=ret_JSON2,
@@ -78,7 +75,6 @@ def getProject4():
                         mimetype="application/json")
 
     return response4
-
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
