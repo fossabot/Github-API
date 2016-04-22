@@ -1,6 +1,7 @@
 import json
 import os
 import GithubUser
+import getpass
 
 from github import Github
 from flask import Flask, Response
@@ -11,24 +12,29 @@ CORS(app)
 
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
-g = Github(token)
+if (token):
+    g = Github(token)
+else:
+    username = input('Enter your Github username : ')
+    password = getpass.getpass('Enter your Github password : ')
+    g = Github(username, password)
+
+print('Connecting to your Github account and getting all yours projects... ')
 user = GithubUser.GithubUser(g)
 ret_JSON = json.dumps(user.get_projects())
 
-################################################
-# Filtering outuput                            #
-################################################
-
-maxMin = sorted(user.projects, key = lambda projects: projects.get('open_issues_count'), reverse=True)
+# Filtering output
+maxMin = sorted(user.projects, key=lambda projects: projects.get(
+    'open_issues_count'), reverse=True)
 ret_JSON2 = json.dumps(maxMin)
 
-minMax = sorted(user.projects, key = lambda projects: projects.get('open_issues_count'))
+minMax = sorted(
+    user.projects, key=lambda projects: projects.get('open_issues_count'))
 ret_JSON3 = json.dumps(minMax)
 
-contributors = sorted(user.projects, key = lambda projects: len(projects.get('contributors')), reverse=True)
+contributors = sorted(user.projects, key=lambda projects: len(
+    projects.get('contributors')), reverse=True)
 ret_JSON4 = json.dumps(contributors)
-
-################################################
 
 
 @app.route('/')
@@ -48,24 +54,26 @@ def getProject():
 @app.route('/filter_max_min', methods=['GET'])
 def getProject2():
     response2 = Response(response=ret_JSON2,
-                        status=200,
-                        mimetype="application/json")
+                         status=200,
+                         mimetype="application/json")
 
     return response2
+
 
 @app.route('/filter_min_max', methods=['GET'])
 def getProject3():
     response3 = Response(response=ret_JSON3,
-                        status=200,
-                        mimetype="application/json")
+                         status=200,
+                         mimetype="application/json")
 
     return response3
+
 
 @app.route('/filter_contributors', methods=['GET'])
 def getProject4():
     response4 = Response(response=ret_JSON4,
-                        status=200,
-                        mimetype="application/json")
+                         status=200,
+                         mimetype="application/json")
 
     return response4
 
