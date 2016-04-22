@@ -8,6 +8,7 @@ from unittest.mock import patch
 
 
 class GithubUserTest(unittest.TestCase):
+
     @classmethod
     def setUp(self):
         repos = self.initRepo(self)
@@ -81,7 +82,8 @@ class GithubUserTest(unittest.TestCase):
 
     def test_givenAGithubUserWhenAskedToGetHisProjectsThenProjectlanguagesShouldBeCorrect(self):
         projects = self.GithubUser.get_projects()
-        self.assertEqual(projects[0].get("languages"), {"Java": 40000, "C": 45000})
+        self.assertEqual(projects[0].get("languages"), {
+                         "Java": 40000, "C": 45000})
 
     def test_givenAGithubUserWhenAskedToGetHisProjectsThenOpenIssuesCountShouldBeCorrect(self):
         projects = self.GithubUser.get_projects()
@@ -96,7 +98,8 @@ class GithubUserTest(unittest.TestCase):
         contributor = projects[0].get("contributors")[0]
         self.assertEqual(contributor.get("id"), 2)
         self.assertEqual(contributor.get("login"), "Aziz")
-        self.assertEqual(contributor.get("avatar_url"), "https://github.com/images/Aziz")
+        self.assertEqual(contributor.get("avatar_url"),
+                         "https://github.com/images/Aziz")
         self.assertEqual(contributor.get("html_url"), "Aziz.com")
         self.assertEqual(contributor.get("type"), "User")
         self.assertEqual(contributor.get("contributions"), 150)
@@ -153,7 +156,8 @@ class GithubUserTest(unittest.TestCase):
         self.assertEqual(user.get("organizations_url"), "organizations_url")
         self.assertEqual(user.get("repos_url"), "repos_url")
         self.assertEqual(user.get("events_url"), "events_url")
-        self.assertEqual(user.get("received_events_url"), "received_events_url ")
+        self.assertEqual(user.get("received_events_url"),
+                         "received_events_url ")
         self.assertEqual(user.get("type"), "user")
 
     def init_issues(self):
