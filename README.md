@@ -63,6 +63,9 @@ Pour démarrer le serveur:
 ```bash
 python PythonServer.py
 ```
+
+Si l'application ne trouve pas votre Github token, celle-ci vous demandera de fournit votre nom d'utilisateur et mot de passe pour se connecter à l'API.
+
 Le serveur roule sur le port 5000.
 
 Vous pouvez tester l'API, avec une interface actualisée, à la page suivante:
