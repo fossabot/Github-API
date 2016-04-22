@@ -65,14 +65,11 @@ python PythonServer.py
 ```
 Le serveur roule sur le port 5000.
 
-Vous pouvez tester l'API à la page suivante:
-http://glo2003.xyz/?server=http://localhost:5000 .
-
-l'API, avec une interface actualisée, est accesible sur la page suivante:
+Vous pouvez tester l'API, avec une interface actualisée, à la page suivante:
 http://glo2003.github.io/team9/?server=http://localhost:5000
 
 Pour consulter les réponses aux questions du projet, vous pouvez acceder à notre wiki:
 - TP1 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP1
 - TP2 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP2
 - TP3 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP3
-
+- TP4 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP4
