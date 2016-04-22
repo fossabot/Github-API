@@ -4,7 +4,7 @@ python:
 before_script:
     flake8 .
 script: 
-- coverage run GithubTest
+- coverage run GithubTest.py
 - coverage report
 deploy:
   provider: heroku
