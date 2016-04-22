@@ -2,8 +2,6 @@
 
 import unittest
 from team9 import GithubUser
-from github import Github
-from unittest.mock import MagicMock
 from unittest.mock import patch
 
 
