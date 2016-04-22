@@ -1,6 +1,7 @@
 import json
 import os
 import GithubUser
+import getpass
 
 from github import Github
 from flask import Flask, Response
@@ -11,9 +12,18 @@ CORS(app)
 
 # Get your Github token from your Github account
 token = os.environ.get('GITHUB_TOKEN')
-g = Github(token)
+if (token is None) { 
+    username = getpass.getuser('Enter your Github username : ')
+    password = getpass.getpass('Enter your Github password : ')
+    g = Github( username, password);
+} else {
+    g = Github(token)
+}
+
 user = GithubUser.GithubUser(g)
 ret_JSON = json.dumps(user.get_projects())
+
+print(_configuration())
 
 ################################################
 # Filtering outuput                            #
