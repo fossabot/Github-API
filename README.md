@@ -14,6 +14,8 @@ Pour commencer, vous devez vous créer un token Github pour accéder à l'API de
 
 Une fois votre Github token récupéré, vous devez l'ajouter comme environnement de variable sous le nom "GITHUB_TOKEN".
 
+Si vous n'avez pas de Github token, l'application vous demandera votre nom d'utilisateur et mot de passe de votre compte Github.
+
 ### Dépendances et installation:
 
 Vous devez utiliser [Python 3](https://www.python.org/download/) pour exécuter l'application, celle-ci utilise les dépendances suivantes:
