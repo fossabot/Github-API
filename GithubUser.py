@@ -141,7 +141,7 @@ class GithubUser:
                 milestone.updated_at),
             "due_on": self.get_isoformat_date(
                 milestone.due_on)
-             }
+        }
         return milestone_dic
 
     def get_isoformat_date(self, date):

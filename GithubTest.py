@@ -2,9 +2,7 @@
 
 import unittest
 from team9 import GithubUser
-from github import Github
 from unittest.mock import MagicMock
-from unittest.mock import patch
 
 
 class GithubUserTest(unittest.TestCase):
@@ -59,10 +57,6 @@ class GithubUserTest(unittest.TestCase):
     def test_givenAGithubUserWhenAskedToGetHisProjectsThenAllOfThemShouldBeReturned(self):
         projects = self.GithubUser.get_projects()
         self.assertEqual(len(projects), 1)
-
-    def test_givenAGithubUserWhenAskedToGetHisProjectsThenProjectIdShouldBeCorrect(self):
-        projects = self.GithubUser.get_projects()
-        self.assertEqual(projects[0].get("id"), 1)
 
     def test_givenAGithubUserWhenAskedToGetHisProjectsThenProjectIdShouldBeCorrect(self):
         projects = self.GithubUser.get_projects()
