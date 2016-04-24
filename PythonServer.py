@@ -21,20 +21,20 @@ else:
 
 print('Connecting to your Github account and getting all yours projects... ')
 user = GithubUser.GithubUser(g)
-ret_JSON = json.dumps(user.get_projects())
+ret_projects_JSON = json.dumps(user.get_projects())
 
 # Filtering output
-maxMin = sorted(user.projects, key=lambda projects: projects.get(
+issuesDescendingOrder = sorted(user.projects, key=lambda projects: projects.get(
     'open_issues_count'), reverse=True)
-ret_JSON2 = json.dumps(maxMin)
+ret_descending_order_JSON = json.dumps(issuesDescendingOrder)
 
-minMax = sorted(
+issuesAscendingOrder = sorted(
     user.projects, key=lambda projects: projects.get('open_issues_count'))
-ret_JSON3 = json.dumps(minMax)
+ret_ascending_order_JSON = json.dumps(issuesAscendingOrder)
 
-contributors = sorted(user.projects, key=lambda projects: len(
+contributorsAscendingOrder = sorted(user.projects, key=lambda projects: len(
     projects.get('contributors')), reverse=True)
-ret_JSON4 = json.dumps(contributors)
+ret_contributors_order_JSON = json.dumps(contributorsAscendingOrder)
 
 
 @app.route('/')
@@ -44,7 +44,7 @@ def get_repos_name():
 
 @app.route('/projects', methods=['GET'])
 def getProject():
-    response = Response(response=ret_JSON,
+    response = Response(response=ret_projects_JSON,
                         status=200,
                         mimetype="application/json")
 
@@ -53,7 +53,7 @@ def getProject():
 
 @app.route('/filter_max_min', methods=['GET'])
 def getProject2():
-    response2 = Response(response=ret_JSON2,
+    response2 = Response(response=ret_descending_order_JSON,
                          status=200,
                          mimetype="application/json")
 
@@ -62,7 +62,7 @@ def getProject2():
 
 @app.route('/filter_min_max', methods=['GET'])
 def getProject3():
-    response3 = Response(response=ret_JSON3,
+    response3 = Response(response=ret_ascending_order_JSON,
                          status=200,
                          mimetype="application/json")
 
@@ -71,7 +71,7 @@ def getProject3():
 
 @app.route('/filter_contributors', methods=['GET'])
 def getProject4():
-    response4 = Response(response=ret_JSON4,
+    response4 = Response(response=ret_contributors_order_JSON ,
                          status=200,
                          mimetype="application/json")
 
