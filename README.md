@@ -1,4 +1,5 @@
 # GLOO-2003 API  ![Build Status](https://travis-ci.com/glo2003/team9.svg?token=Epmbu7uyWDkfVaXsgPa9&branch=master) ![Heroku Status](https://heroku-badge.herokuapp.com/?app=github-api-team9)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fluiseduardo1%2FGithub-API.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fluiseduardo1%2FGithub-API?ref=badge_shield)
 
 ## Vision
 
@@ -78,3 +79,7 @@ Pour consulter les réponses aux questions du projet, vous pouvez acceder à not
 - TP2 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP2
 - TP3 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP3
 - TP4 : https://github.com/glo2003/team9/wiki/R%C3%A9ponses-questions-TP4
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fluiseduardo1%2FGithub-API.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fluiseduardo1%2FGithub-API?ref=badge_large)
